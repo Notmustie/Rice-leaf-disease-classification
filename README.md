@@ -69,5 +69,5 @@ rice-leaf-disease-methodology/
    │  ├─ compare_models.py
    │  └─ stat_tests.py
    └─ warehouse/
-      ├─ schema.sql
+      ├─ schama.sql
       └─ load_predictions.py
