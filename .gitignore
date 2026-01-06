@@ -2,6 +2,14 @@
 __pycache__/
 *.py[codz]
 *$py.class
+*.pyc
+# data
+data/raw/
+data/processed/
+data/splits/
+
+#reports can be committed, but if hey get large you can ignore them too
+#reports/
 
 # C extensions
 *.so
@@ -200,6 +208,9 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+#macOS
+.DS_Store
 
 # Marimo
 marimo/_static/
