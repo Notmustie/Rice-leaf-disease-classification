@@ -9,7 +9,7 @@ data/processed/
 data/splits/
 
 #reports can be committed, but if hey get large you can ignore them too
-#reports/
+reports/
 
 # C extensions
 *.so
@@ -146,6 +146,7 @@ celerybeat.pid
 .env
 .envrc
 .venv
+.venv/
 env/
 venv/
 ENV/
