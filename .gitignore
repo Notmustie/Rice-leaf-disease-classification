@@ -217,3 +217,24 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Local outputs / artifacts
+outputs/
+*.log
+
+# Data (keep raw datasets out of git)
+data/raw/
+data/processed/
+data/interim/
