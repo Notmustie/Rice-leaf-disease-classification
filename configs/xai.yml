@@ -1,0 +1,28 @@
+model_path: "models/rice_disease_efficientnetv2b0.keras"
+model_name: "efficientnetv2b0"
+
+predict_root: "data/predict"   # one folder deep: predict/<class>/<img>
+
+img_size: [224, 224]
+class_names:
+  - "Bacterial Leaf Blight"
+  - "Brown Spot"
+  - "Healthy Rice Leaf"
+  - "Leaf Blast"
+  - "Leaf Scald"
+  - "Rice Hispa"
+
+preprocess: "efficientnetv2"   # "rescale" | "efficientnetv2"
+reject_threshold: 0.60
+top_k: 3
+max_per_class: null            # null = all, or set an int like 50
+
+# Grad-CAM layer config
+# custom_cnn example:
+#   base_model_name: null
+#   feature_layer: "conv2d_15"
+# efficientnet example:
+#   base_model_name: "efficientnetv2-b0"
+#   feature_layer: "efficientnetv2-b0"   # robust backbone-output mode
+base_model_name: "efficientnetv2-b0"
+feature_layer: "efficientnetv2-b0"

@@ -75,6 +75,19 @@ python src/data/standardize.py --kaggle_root "data/raw/kaggle/DATASET_NAME"
 ```
 
 ---
+## Explainability (Grad-CAM)
+
+We provide a reproducible Grad-CAM pipeline that generates:
+- overlay visualizations (per image)
+- heatmaps (per image)
+- `xai_summary.csv` with confidence, rejection flag, and attribution metrics (focus score, entropy)
+- `xai_agg.csv` for report tables (accepted vs rejected)
+
+### Run
+```bash
+pip install -r requirements.txt
+python scripts/run_xai_gradcam.py
+```
 
 ## Pipeline Overview
 
