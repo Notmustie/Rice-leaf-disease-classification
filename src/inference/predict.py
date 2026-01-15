@@ -35,6 +35,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Optional, Tuple
+from src.inference.rejection import RejectionPolicy
 
 import numpy as np
 import pandas as pd
@@ -188,7 +189,9 @@ def main() -> None:
             pred_label = class_names[int(pred_idx[i])]
             conf = float(pred_conf[i])
 
-            rejected = conf < cfg.reject_threshold
+            policy = RejectionPolicy(threshold=cfg.reject_threshold)
+
+            rejected = policy.reject(conf)
 
             labels_k = [class_names[int(j)] for j in topk_idx[i].tolist()]
             confs_k = [float(x) for x in topk_probs[i].tolist()]
