@@ -238,3 +238,7 @@ outputs/
 data/raw/
 data/processed/
 data/interim/
+
+# Generated artifacts
+artifacts/
+
